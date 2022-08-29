@@ -13,7 +13,6 @@ all: $(NAME)
 
 $(NAME)	:	$(OBJ) PhoneBook.hpp Contact.hpp
 	c++ $(FLAGS) $(OBJ) -o $@
-	echo "Доделай это говно, чтобы сортировало норм когда size == 8"
 
 clean	:
 	$(RM) $(OBJ)
