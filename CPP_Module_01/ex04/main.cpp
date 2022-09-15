@@ -40,17 +40,17 @@ int main(int argc, char *argv[]) {
 	std::fstream fin;
 	std::ofstream fout;
 
-	fout.open(replaceFileName(argv[1]));
-	if (!fout.is_open()) {
-		std::cout << "Error! Output file is not opened" << std::endl;
+	fin.open(argv[1]);
+	if (!fin.is_open()) {
+		std::cout << "Error! Input file is not opened" << std::endl;
 		fin.close();
 		fout.close();
 		exit(1);
 	}
 
-	fin.open(argv[1]);
-	if (!fin.is_open()) {
-		std::cout << "Error! Input file is not opened" << std::endl;
+	fout.open(replaceFileName(argv[1]));
+	if (!fout.is_open()) {
+		std::cout << "Error! Output file is not opened" << std::endl;
 		fin.close();
 		fout.close();
 		exit(1);

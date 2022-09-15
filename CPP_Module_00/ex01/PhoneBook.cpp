@@ -12,6 +12,8 @@ std::string	PhoneBook::scanner(std::string name) {
 
 	std::cout << "Enter " << name << ": ";
 	std::cin >> str;
+	if (str.empty())
+		exit(1);
 	return str;
 }
 
